@@ -1,7 +1,4 @@
-<div>
-  <h1> Update Product</h1>
-</div>
-<form method="post" action="/edit-prodcut/{{product._id}}">
+<form method="post" action="/products/add">
   <div class="mb-3">
     <label for="name" class="form-label">Name</label>
     <input
@@ -9,7 +6,7 @@
       name="name"
       class="form-control"
       id="name"
-      value="{{product.name}}"
+      aria-describedby="emailHelp"
     />
   </div>
   <div class="mb-3">
@@ -17,11 +14,9 @@
     <input
       type="text"
       name="price"
-      `
       class="form-control"
       id="price"
       aria-describedby="emailHelp"
-      value="{{product.price}}"
     />
   </div>
   <div class="mb-3">
@@ -32,7 +27,6 @@
       class="form-control"
       id="category"
       aria-describedby="emailHelp"
-      value="{{product.category}}"
     />
   </div>
   <div class="mb-3">
@@ -43,7 +37,6 @@
       class="form-control"
       id="description"
       aria-describedby="emailHelp"
-      value="{{product.description}}"
     />
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>

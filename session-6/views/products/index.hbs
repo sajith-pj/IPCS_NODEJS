@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-end mt-5">
-  <a href="/add-product" class="btn btn-primary">Add Product</a>
+  <a href="/products/add" class="btn btn-primary">Add Product</a>
 </div>
 
 <div class="row">
@@ -10,7 +10,7 @@
         <p class="card-text">{{this.description}}</p>
         <p class="card-text">{{this.price}}</p>
         <p class="card-text">{{this.category}}</p>
-        <a href="/edit-product/{{this._id}}" class="btn btn-primary">Edit</a>
+        <a href="/product/edit/{{this._id}}" class="btn btn-primary">Edit</a>
         <button
           type="button"
           id="delete-product"
@@ -24,6 +24,6 @@
 
 <script>
 
-  function removeProduct( id ){ fetch('/remove-product/'+ id, { method:
-  'POST',}).then(response => { console.log(response.json()) }) }
+  function removeProduct( id ){ fetch('/product/delete/'+ id, { method:
+  'PUT',}).then(response => { console.log(response.json()) }) }
 </script>
