@@ -7,6 +7,7 @@ import UserList from "./Pages/Users";
 import Counter from "./Pages/Counter";
 import ClassComponent from "./Pages/ClassComponent";
 import Layout from "./Components/Layout";
+import UseEffectDemo from "./Pages/UseEffect";
 
 function App() {
   const router = createBrowserRouter([
@@ -39,6 +40,10 @@ function App() {
     {
       path: "/class",
       element: <ClassComponent />,
+    },
+    {
+      path: "/useeffect",
+      element: <UseEffectDemo />,
     },
   ]);
 
